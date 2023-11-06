@@ -7,7 +7,6 @@
     list-style: none;
     text-decoration: none;
     color: var(--main-text-color);
-    overflow: hidden;
 }
 a{
     cursor: pointer;
@@ -19,7 +18,8 @@ a{
     --main-bg-color: rgb(50, 49, 49);
     --secondary-bg-color: rgb(10, 10, 10);
     --main-text-color: white;
-    --bottons-border-color: rgb(255, 115, 0);
+    --bottons-border-color: #ff7300;
+    --icons-color: #b1faf5;
     --logo-font-family: Agbalumo,Kenia;
     --main-font-famiy: Arial, Helvetica, sans-serif;
 }
@@ -45,7 +45,8 @@ nav{
     font-size: 1.2rem;
 }
 .header__hero-section{
-    height: 85vh;
+    min-height: 90vh;
+    max-height: fit-content;
     border-radius: 5rem;
 }
 .header__hero-section__img {
@@ -108,7 +109,26 @@ nav{
     width: 100%;
 }
 
-
+.header__hero-section__info__icons i{
+font-size: 1.7rem;
+padding: .2rem;
+color: var(--icons-color);
+transition: 1s;
+}
+.header__hero-section__info__icons i:hover{
+    color: var(--main-bg-color);
+    transform: scale(1.2);
+    color: var(--bottons-border-color);
+    border:solid 2px var(--bottons-border-color);
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+main{
+    
+    border-radius: 1rem;
+    background-color: rgb(53, 53, 53);
+    min-height: fit-content;
+}
 
 
 
