@@ -129,8 +129,22 @@ main{
     background-color: rgb(53, 53, 53);
     min-height: fit-content;
 }
-
-
+.card-title{
+    color: var(--bottons-border-color);
+}
+i.card-icons{
+    font-size: 5rem;
+    color: var(--icons-color);
+}
+.card{
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem  var(--bottons-border-color) ;
+    transition: 1s;
+}
+.card:hover {
+   transform: scale(1.1);
+   box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem  var(--icons-color) ;
+   border-radius: 50%;
+}
 
 
 
