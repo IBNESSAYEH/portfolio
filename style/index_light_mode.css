@@ -18,14 +18,17 @@ a {
 
 /* variables */
 :root {
-    --main-bg-color: rgb(50, 49, 49);
-    --secondary-bg-color: rgb(10, 10, 10);
-    --main-text-color: white;
+    --main-bg-color: rgb(254, 254, 254);
+    --secondary-bg-color: rgb(255, 255, 255);
+    --main-text-color: rgb(0, 0, 0);
     --bottons-border-color: #ff7300;
-    --icons-color: #b1faf5;
+    --icons-color: #64f5f5;
+    --card-color:rgb(23, 21, 21);
     --logo-font-family: Agbalumo, Kenia;
     --main-font-famiy: Arial, Helvetica, sans-serif;
-    --main-section-color: rgb(74, 74, 74);
+    --main-section-color: rgb(106, 95, 95);
+    --card-text-color: white
+
 }
 
 body {
@@ -131,6 +134,7 @@ nav {
 .header__hero-section__info__icons i {
     font-size: 1.7rem;
     padding: .2rem;
+    text-shadow: 1px 1px 1px black;
     color: var(--icons-color);
     transition: 1s;
 }
@@ -147,7 +151,8 @@ nav {
 section {
 
     border-radius: 1rem;
-    background-color: var(--main-section-color);
+    box-shadow: 0.1rem 0.1rem 1rem 0.2rem var(--main-text-color);
+    background-color: var(--secondary-bg-color);
     min-height: fit-content;
 
 }
@@ -162,7 +167,7 @@ i.card-icons {
 }
 
 .services-card {
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bottons-border-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
     transition: 3s;
     animation: card 2s linear 3s 1 normal running;
 }
@@ -204,7 +209,12 @@ i.card-icons {
     transition: 2s;
     animation: skills-icon2 4s infinite 2s linear normal running;
 }
-
+.card{
+    background-color: var(--card-color);
+}
+.card-text{
+    color: var(--card-text-color);
+}
 @keyframes card {
     from {
         translate: 300px 0;

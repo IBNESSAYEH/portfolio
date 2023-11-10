@@ -1,101 +1,249 @@
 /* global setting */
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kenia&display=swap');
 
-:root {
-  --main-bg-color: #ffffff;
-  --secondary-bg-color: #f5f5f5;
-  --main-text-color: #333333;
-  --buttons-border-color: #ff7300;
-  --icons-color: #007bff;
-  --logo-font-family: 'Agbalumo', sans-serif;
-}
-
-body {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  font-family: 'Arial', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-text-color);
 }
 
 a {
-  color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-text-color);
 }
 
-/* Navigation */
+/* variables */
+:root {
+    --main-bg-color: rgb(50, 49, 49);
+    --secondary-bg-color: rgb(10, 10, 10);
+    --main-text-color: white;
+    --bottons-border-color: #ff7300;
+    --icons-color: #b1faf5;
+    --logo-font-family: Agbalumo, Kenia;
+    --main-font-famiy: Arial, Helvetica, sans-serif;
+    --main-section-color: rgb(74, 74, 74);
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
 nav {
-  width: 90%;
-  position: fixed;
+    width: 90%;
+    position: fixed;
 }
 
 .header__nav__ul li a {
-  color: #333333;
+    color: var(--main-text-color);
 }
 
 .header__nav__ul li a:hover {
-  border-bottom: solid 2px var(--buttons-border-color);
+    border-bottom: solid 2px var(--bottons-border-color);
 }
 
 .header__nav__ul li .list-item-active {
-  color: var(--buttons-border-color);
+    color: var(--bottons-border-color);
 }
 
 .logo {
-  font-family: var(--logo-font-family);
-  color: var(--buttons-border-color);
+    font-family: var(--logo-font-family);
+    color: var(--bottons-border-color);
+    font-size: 1.2rem;
 }
 
-/* Hero section */
 .header__hero-section {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  position: relative;
-  overflow: hidden;
+    min-height: 90vh;
+    max-height: fit-content;
+    border-radius: 5rem;
+}
+
+.header__hero-section__img {
+    border-bottom: solid .2rem var(--bottons-border-color);
 }
 
 .header__hero-section__img:hover {
-  border-color: var(--main-bg-color);
+    border-bottom: solid .2rem var(--main-bg-color);
+}
+
+.header__hero-section__img::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bottons-border-color);
+    z-index: -2;
+    transition: 1s;
 }
 
 .header__hero-section__img:hover::before {
-  transform: scale(1);
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.header__hero-section__info__img {
+
+    width: 2rem;
+    height: 2rem;
 }
 
 .header__hero-section__info__img:hover {
-  background: var(--buttons-border-color);
-  border: 1px solid var(--buttons-border-color);
-  border-radius: 50%;
+    background: var(--bottons-border-color);
+    border: 1px solid var(--bottons-border-color);
+    border-radius: 50%;
+}
+
+.hero_section_btns {
+    width: 50
 }
 
 .hero_section_btns a {
-  border: solid 2px var(--buttons-border-color);
-  color: var(--buttons-border-color);
+    width: 5rem;
+    padding: .3rem;
+    text-align: center;
+    position: relative;
+    border: solid 2px var(--bottons-border-color);
+    border-radius: .5rem;
+
+}
+
+.hero_section_btns a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bottons-border-color);
+    z-index: -2;
+    transition: 1s;
 }
 
 .hero_section_btns a:hover::before {
-  width: 100%;
+    width: 100%;
 }
 
 .header__hero-section__info__icons i {
-  color: var(--icons-color);
+    font-size: 1.7rem;
+    padding: .2rem;
+    color: var(--icons-color);
+    transition: 1s;
 }
 
 .header__hero-section__info__icons i:hover {
-  color: var(--buttons-border-color);
+    color: var(--main-bg-color);
+    transform: scale(1.2);
+    color: var(--bottons-border-color);
+    border: solid 2px var(--bottons-border-color);
+    transform: rotate(360deg);
+    border-radius: 50%;
 }
 
-/* Main content */
-main {
-  background-color: #f5f5f5;
-  padding: 2rem;
+section {
+
+    border-radius: 1rem;
+    background-color: var(--main-section-color);
+    min-height: fit-content;
+
 }
 
-.card {
-  padding: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.card-title {
+    color: var(--bottons-border-color);
 }
 
-/* Add more styles as needed for the light mode design */
+i.card-icons {
+    font-size: 5rem;
+    color: var(--icons-color);
+}
+
+.services-card {
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bottons-border-color);
+    transition: 3s;
+    animation: card 2s linear 3s 1 normal running;
+}
+
+.services-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    border-radius: 4rem;
+}
+
+.hobbies-card {
+    width: 18rem;
+    height: 15rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    overflow: hidden;
+    transition: 2s;
+}
+
+.hobbies-card:hover {
+    height: 30rem;
+
+}
+
+.hobbies-card img{
+
+
+    height: 18rem !important;
+
+}
+
+.skills-section .even-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon 4s infinite 2s linear normal running;
+}
+
+.skills-section .e-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon2 4s infinite 2s linear normal running;
+}
+
+@keyframes card {
+    from {
+        translate: 300px 0;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes skills-icon {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+        color: var(--main-text-color);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes skills-icon2 {
+    0% {
+        color: var(--main-text-color);
+        transform: scale(2);
+    }
+
+    100% {}
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        color: var(--main-text-color);
+        transform: scale(2);
+    }
+}
