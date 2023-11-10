@@ -1,0 +1,101 @@
+/* global setting */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kenia&display=swap');
+
+:root {
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f5f5f5;
+  --main-text-color: #333333;
+  --buttons-border-color: #ff7300;
+  --icons-color: #007bff;
+  --logo-font-family: 'Agbalumo', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  color: #333333;
+}
+
+/* Navigation */
+nav {
+  width: 90%;
+  position: fixed;
+}
+
+.header__nav__ul li a {
+  color: #333333;
+}
+
+.header__nav__ul li a:hover {
+  border-bottom: solid 2px var(--buttons-border-color);
+}
+
+.header__nav__ul li .list-item-active {
+  color: var(--buttons-border-color);
+}
+
+.logo {
+  font-family: var(--logo-font-family);
+  color: var(--buttons-border-color);
+}
+
+/* Hero section */
+.header__hero-section {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__hero-section__img:hover {
+  border-color: var(--main-bg-color);
+}
+
+.header__hero-section__img:hover::before {
+  transform: scale(1);
+}
+
+.header__hero-section__info__img:hover {
+  background: var(--buttons-border-color);
+  border: 1px solid var(--buttons-border-color);
+  border-radius: 50%;
+}
+
+.hero_section_btns a {
+  border: solid 2px var(--buttons-border-color);
+  color: var(--buttons-border-color);
+}
+
+.hero_section_btns a:hover::before {
+  width: 100%;
+}
+
+.header__hero-section__info__icons i {
+  color: var(--icons-color);
+}
+
+.header__hero-section__info__icons i:hover {
+  color: var(--buttons-border-color);
+}
+
+/* Main content */
+main {
+  background-color: #f5f5f5;
+  padding: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add more styles as needed for the light mode design */

@@ -1,6 +1,7 @@
 /* global setting */
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kenia&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,54 +9,67 @@
     text-decoration: none;
     color: var(--main-text-color);
 }
-a{
+
+a {
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: var(--main-text-color);
 }
+
 /* variables */
-:root{
+:root {
     --main-bg-color: rgb(50, 49, 49);
     --secondary-bg-color: rgb(10, 10, 10);
     --main-text-color: white;
     --bottons-border-color: #ff7300;
     --icons-color: #b1faf5;
-    --logo-font-family: Agbalumo,Kenia;
+    --logo-font-family: Agbalumo, Kenia;
     --main-font-famiy: Arial, Helvetica, sans-serif;
+    --main-section-color: rgb(74, 74, 74);
 }
-body{
+
+body {
     background-color: var(--main-bg-color);
 }
-nav{
+
+nav {
     width: 90%;
     position: fixed;
 }
-.header__nav__ul li a{
-    color: white;
+
+.header__nav__ul li a {
+    color: var(--main-text-color);
 }
-.header__nav__ul li a:hover{
-    border-bottom:solid 2px var(--bottons-border-color);
+
+.header__nav__ul li a:hover {
+    border-bottom: solid 2px var(--bottons-border-color);
 }
-.header__nav__ul li .list-item-active{
+
+.header__nav__ul li .list-item-active {
     color: var(--bottons-border-color);
 }
-.logo{
+
+.logo {
     font-family: var(--logo-font-family);
     color: var(--bottons-border-color);
     font-size: 1.2rem;
 }
-.header__hero-section{
+
+.header__hero-section {
     min-height: 90vh;
     max-height: fit-content;
     border-radius: 5rem;
 }
+
 .header__hero-section__img {
     border-bottom: solid .2rem var(--bottons-border-color);
 }
-.header__hero-section__img:hover{
+
+.header__hero-section__img:hover {
     border-bottom: solid .2rem var(--main-bg-color);
 }
-.header__hero-section__img::before{
+
+.header__hero-section__img::before {
     content: '';
     position: absolute;
     top: 2rem;
@@ -66,35 +80,39 @@ nav{
     z-index: -2;
     transition: 1s;
 }
-.header__hero-section__img:hover::before{
+
+.header__hero-section__img:hover::before {
     border-radius: 1rem;
     width: 100%;
 }
 
-.header__hero-section__info__img{
-    
+.header__hero-section__info__img {
+
     width: 2rem;
     height: 2rem;
 }
-.header__hero-section__info__img:hover{
+
+.header__hero-section__info__img:hover {
     background: var(--bottons-border-color);
     border: 1px solid var(--bottons-border-color);
     border-radius: 50%;
 }
-.hero_section_btns{
-    width:50
+
+.hero_section_btns {
+    width: 50
 }
 
-.hero_section_btns a{
+.hero_section_btns a {
     width: 5rem;
     padding: .3rem;
     text-align: center;
     position: relative;
     border: solid 2px var(--bottons-border-color);
     border-radius: .5rem;
-    
+
 }
-.hero_section_btns a::before{
+
+.hero_section_btns a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -105,66 +123,127 @@ nav{
     z-index: -2;
     transition: 1s;
 }
-.hero_section_btns a:hover::before{
+
+.hero_section_btns a:hover::before {
     width: 100%;
 }
 
-.header__hero-section__info__icons i{
-font-size: 1.7rem;
-padding: .2rem;
-color: var(--icons-color);
-transition: 1s;
+.header__hero-section__info__icons i {
+    font-size: 1.7rem;
+    padding: .2rem;
+    color: var(--icons-color);
+    transition: 1s;
 }
-.header__hero-section__info__icons i:hover{
+
+.header__hero-section__info__icons i:hover {
     color: var(--main-bg-color);
     transform: scale(1.2);
     color: var(--bottons-border-color);
-    border:solid 2px var(--bottons-border-color);
+    border: solid 2px var(--bottons-border-color);
     transform: rotate(360deg);
     border-radius: 50%;
 }
-main{
-    
+
+section {
+
     border-radius: 1rem;
-    background-color: rgb(53, 53, 53);
+    background-color: var(--main-section-color);
     min-height: fit-content;
+
 }
-.card-title{
+
+.card-title {
     color: var(--bottons-border-color);
 }
-i.card-icons{
+
+i.card-icons {
     font-size: 5rem;
     color: var(--icons-color);
 }
-.card{
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem  var(--bottons-border-color) ;
-    transition: 1s;
-}
-.card:hover {
-   transform: scale(1.1);
-   box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem  var(--icons-color) ;
-   border-radius: 50%;
+
+.services-card {
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bottons-border-color);
+    transition: 3s;
+    animation: card 2s linear 3s 1 normal running;
 }
 
+.services-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    border-radius: 4rem;
+}
+
+.hobbies-card {
+    width: 18rem;
+    height: 15rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    overflow: hidden;
+    transition: 2s;
+}
+
+.hobbies-card:hover {
+    height: 30rem;
+
+}
+
+.hobbies-card img{
 
 
+    height: 18rem !important;
 
+}
 
+.skills-section .even-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon 4s infinite 2s linear normal running;
+}
 
+.skills-section .e-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon2 4s infinite 2s linear normal running;
+}
 
+@keyframes card {
+    from {
+        translate: 300px 0;
+    }
 
+    to {
+        translate: 0 0;
+    }
+}
 
+@keyframes skills-icon {
+    0% {
+        transform: scale(1);
+    }
 
+    50% {
+        transform: scale(2);
+        color: var(--main-text-color);
+    }
 
-/* :root {
-    --main-bg-color: #3DD422 #191919 #43098B #2274E0 #F73522 ;
-  }
-  
-  .un {
-    color: white;
-    background-color: var(--main-bg-color);
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-  } */
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes skills-icon2 {
+    0% {
+        color: var(--main-text-color);
+        transform: scale(2);
+    }
+
+    100% {}
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        color: var(--main-text-color);
+        transform: scale(2);
+    }
+}
