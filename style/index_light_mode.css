@@ -39,7 +39,11 @@ nav {
     width: 90%;
     position: fixed;
 }
-
+nav i {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: -0.1rem;
+}
 .header__nav__ul li a {
     color: var(--main-text-color);
 }
@@ -180,15 +184,17 @@ i.card-icons {
 
 .hobbies-card {
     width: 18rem;
-    height: 15rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    height: 13rem;
+    box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem var(--icons-color);
     overflow: hidden;
     transition: 2s;
+    transform: skew(-7deg);
 }
 
 .hobbies-card:hover {
     height: 30rem;
-
+    transform: skew(0deg);
+    box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem var(--bottons-border-color);
 }
 
 .hobbies-card img{
@@ -215,6 +221,40 @@ i.card-icons {
 .card-text{
     color: var(--card-text-color);
 }
+ .nav-sm{
+    position: relative;
+    color: var(--bottons-border-color);
+    /* border: 1px solid var(--bottons-border-color) !important; */
+    border-radius: 50%;
+    padding: 0.3rem;
+    transition: 2s;
+    
+}
+ .nav-sm:hover{
+   background-color: var(--bottons-border-color);
+   color: var(--main-text-color);
+}
+.nav-sm1{
+    right: 6rem;
+    top: -1rem;
+}
+.nav-sm2{
+    right: 9.6rem;
+    top: 1.1rem;
+}
+.nav-sm3{
+    right: 11.8rem;
+    top: 2.8rem;
+}
+.nav-sm4{
+    right: 13.1rem;
+    top: 3.3rem;
+}
+.nav-sm5{
+    right: 14.5rem;
+    top: 2.8rem;
+}
+
 @keyframes card {
     from {
         translate: 300px 0;

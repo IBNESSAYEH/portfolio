@@ -16,19 +16,27 @@
 
 <body>
   <!-- hero section -->
-  <header class="header container mt-3 position-relative ">
+  <header class="header container mt-3 position-relative " id="home">
     <nav class="row justify-content-between align-items-center ">
-      <h3 class="logo col-8 col-md-5">Abdellatif Ibnessayeh</h3>
-      <ul class="header__nav__ul d-none d-md-flex col-md-6 justify-content-between">
-        <li><a href="#" class="list-item-active">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact us</a></li>
+      <h3 class="logo col-8 col-md-4">Abdellatif Ibnessayeh</h3>
+      <ul class="header__nav__ul d-none d-md-flex col-md-8 justify-content-between">
+        <li><a href="#home" class="list-item-active"><i class='bx bx-home-alt-2 list-item-active'></i> Home</a></li>
+        <li><a href="#about"><i class='bx bx-info-square' ></i> About us</a></li>
+        <li><a href="#skills"><i class='bx bx-code-alt'></i> Skills</a></li>
+        <li><a href="#services"><i class='bx bx-briefcase'></i> Services</a></li>
+        <li><a href="#contact"><i class='bx bx-envelope'></i> Contact us</a></li>
       </ul>
       <div class="header__nav__icon d-sm-inline-block d-md-none w-25 h-25 col-sm-2">
-        <span class="material-symbols-outlined"> menu </span>
+        
+        <span class="material-symbols-outlined"> menu 
+        <a href="#contact"><i class='nav-sm nav-sm1 bx bx-envelope'></i></a>
+        <a href="#services"><i class='nav-sm nav-sm2 bx bx-briefcase'></i></a>
+        <a href="#skills"><i class='nav-sm nav-sm3 bx bx-code-alt'></i></a>
+        <a href="#about"><i class='nav-sm nav-sm4 bx bx-info-square' ></i></a>
+        <a href="#home"><i class='nav-sm nav-sm5 bx bx-home-alt-2 list-item-active'></i></a>
+        </span>
       </div>
+     
     </nav>
     <div class="header__hero-section row justify-content-between align-items-center">
       <div class="header__hero-section__info col-12 col-lg-6 mt-5 ">
@@ -47,9 +55,9 @@
           <a href="#"><i class='bx bxl-instagram'></i></a>
           <a href="#"><i class='bx bxl-facebook'></i></a>
           <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
-          <a href="#"><i class='bx bxl-gmail'></i></a>
+          <a href="https://github.com/IBNESSAYEH"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/abdellatif-ibnessayeh-ab6000296"><i class='bx bxl-linkedin'></i></a>
+          <a href="mailto:abdellatifibnessayeh@gmail.com"><i class='bx bxl-gmail'></i></a>
         </div>
         <div class="hero_section_btns w-75 d-flex gap-2 my-4">
           <!-- <a href="#" class="w-25">Hire me</a> -->
@@ -64,7 +72,7 @@
   </header>
   <main class="container my-5 ">
     <section class="about-section py-5 row justify-content-center gap-5 justify-content-md-around">
-      <h4 class="text-center mb-4 ">Services</h4>
+      <h4 class="text-center mb-4 " id="services">Services</h4>
       <div class=" col-7 col-md-4 col-lg-3 ">
         <div class="services-card card " style="width: 100%;">
           <div class="card-body">
@@ -102,7 +110,7 @@
 
 
 <section class="skills-section py-5 row justify-content-center gap-5 my-5 justify-content-md-around">
-  <h4 class="text-center ">Skills</h4>
+  <h4 class="text-center " id="skills">Skills</h4>
 <div class="row justify-content-around   ">
   <div class="col"><i class='even-icon bx bxl-html5 d-inline-block '></i></div>
   <div class="col"><i class='e-icon bx bxl-bootstrap d-inline-block ' ></i></div>
@@ -115,7 +123,7 @@
   <div class="col"><i class='even-icon bx bxl-mongodb d-inline-block '></i></div>
   <div class="col"><i class='e-icon bx bxl-postgresql d-inline-block '></i></div>
   <div class="col"><i class='even-icon bx bxl-sass d-inline-block ' ></i></div>
-  <h4 class="text-center my-4 ">Hobies</h4>
+  <h4 class="text-center my-4 " id="about">Hobies</h4>
   <div class="row justify-content-around gap-3   my-5 ">
     <div class="col-12 col-md-5 col-lg-3 d-flex justify-content-center ">
       <div class="hobbies-card card   ">
@@ -169,12 +177,12 @@
 
 
     <section class="lets-work-section py-5 row justify-content-center gap-5 my-5 justify-content-md-around">
-      <h4 class="text-center mb-4 ">Let's work together</h4>
+      <h4 class="text-center mb-4 " id="contact">Let's work together</h4>
       <div class=" col-7 col-md-4 col-lg-3 ">
         <div class="services-card card " style="width: 100%; height:15rem">
           <div class="card-body">
             <p class="text-center "><i class='bx bxs-phone-call card-icons'></i> </p>
-            <h5 class="card-title text-center ">0610703593</h5>
+            <h5 class="card-title text-center ">+212 0610703593</h5>
 
           </div>
         </div>
@@ -202,7 +210,7 @@
 
     </section>
   </main>
-
+<script src="script/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
