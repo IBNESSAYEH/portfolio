@@ -11,21 +11,14 @@
 }
 
 a {
-    cursor: pointer;
+    cursor: pointer !important;
     text-decoration: none;
     color: var(--main-text-color);
 }
 
 /* variables */
-:root {
-    --main-bg-color: rgb(50, 49, 49);
-    --secondary-bg-color: rgb(10, 10, 10);
-    --main-text-color: white;
-    --bottons-border-color: #ff7300;
-    --icons-color: #b1faf5;
-    --logo-font-family: Agbalumo, Kenia;
-    --main-font-famiy: Arial, Helvetica, sans-serif;
-    --main-section-color: rgb(74, 74, 74);
+:root { --main-bg-color: rgb(23, 21, 21); --secondary-bg-color: rgb(35, 35, 35); --main-text-color: rgb(255, 255, 255); --bottons-border-color: #ff7300; --icons-color: #64f5f5; --card-color:rgb(119, 116, 116); --logo-font-family: Agbalumo, Kenia; --main-font-famiy: Arial, Helvetica, sans-serif; --main-section-color: rgb(106, 95, 95); --card-text-color: rgb(252, 252, 252);
+
 }
 
 body {
@@ -33,23 +26,39 @@ body {
 }
 
 nav {
+    background-color: var(--bottons-border-color);
+    border-radius: 3rem;
     width: 90%;
+    margin-bottom: 12rem;
     position: fixed;
+    z-index: 10;
+    padding: .7rem 1rem 0;
+   
 }
-
+nav i {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: -0.1rem;
+}
 .header__nav__ul li a {
     color: var(--main-text-color);
 }
 
 .header__nav__ul li a:hover {
-    border-bottom: solid 2px var(--bottons-border-color);
+    border-bottom: solid 2px var(--icons-color);
 }
 
 .header__nav__ul li .list-item-active {
-    color: var(--bottons-border-color);
+    color: var(--icons-color);
 }
 
 .logo {
+    background-color: var(--main-text-color);
+    border-radius: 3rem;
+    position: relative;
+   
+    bottom: .2rem;
+    padding: .2rem 1rem;
     font-family: var(--logo-font-family);
     color: var(--bottons-border-color);
     font-size: 1.2rem;
@@ -63,6 +72,7 @@ nav {
 
 .header__hero-section__img {
     border-bottom: solid .2rem var(--bottons-border-color);
+    
 }
 
 .header__hero-section__img:hover {
@@ -131,6 +141,7 @@ nav {
 .header__hero-section__info__icons i {
     font-size: 1.7rem;
     padding: .2rem;
+    text-shadow: 1px 1px 1px black;
     color: var(--icons-color);
     transition: 1s;
 }
@@ -147,7 +158,8 @@ nav {
 section {
 
     border-radius: 1rem;
-    background-color: var(--main-section-color);
+    box-shadow: 0.1rem 0.1rem 1rem 0.2rem var(--main-text-color);
+    background-color: var(--secondary-bg-color);
     min-height: fit-content;
 
 }
@@ -162,7 +174,7 @@ i.card-icons {
 }
 
 .services-card {
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--bottons-border-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
     transition: 3s;
     animation: card 2s linear 3s 1 normal running;
 }
@@ -175,15 +187,17 @@ i.card-icons {
 
 .hobbies-card {
     width: 18rem;
-    height: 15rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--icons-color);
+    height: 13rem;
+    box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem var(--icons-color);
     overflow: hidden;
     transition: 2s;
+    transform: skew(-7deg);
 }
 
 .hobbies-card:hover {
     height: 30rem;
-
+    transform: skew(0deg);
+    box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem var(--bottons-border-color);
 }
 
 .hobbies-card img{
@@ -192,6 +206,52 @@ i.card-icons {
     height: 18rem !important;
 
 }
+
+
+.card{
+    background-color: var(--card-color);
+}
+.card-text{
+    color: var(--card-text-color);
+}
+ .nav-sm{
+    position: relative;
+    color: var(--bottons-border-color);
+    /* border: 1px solid var(--bottons-border-color) !important; */
+    border-radius: 50%;
+    padding: 0.3rem;
+    transition: 2s;
+    
+}
+ .nav-sm:hover{
+   background-color: var(--bottons-border-color);
+   color: var(--main-text-color);
+}
+.nav-sm1{
+    right: 6rem;
+    top: -1rem;
+}
+.nav-sm2{
+    right: 9.6rem;
+    top: 1.1rem;
+}
+.nav-sm3{
+    right: 11.8rem;
+    top: 2.8rem;
+}
+.nav-sm4{
+    right: 13.1rem;
+    top: 3.3rem;
+}
+.nav-sm5{
+    right: 14.5rem;
+    top: 2.8rem;
+}
+.nav-sm6{
+    right: 16.6rem;
+    top: 1.7rem;
+}
+
 
 .skills-section .even-icon {
     color: var(--icons-color);
@@ -203,16 +263,6 @@ i.card-icons {
     color: var(--icons-color);
     transition: 2s;
     animation: skills-icon2 4s infinite 2s linear normal running;
-}
-
-@keyframes card {
-    from {
-        translate: 300px 0;
-    }
-
-    to {
-        translate: 0 0;
-    }
 }
 
 @keyframes skills-icon {
@@ -229,7 +279,6 @@ i.card-icons {
         transform: scale(1);
     }
 }
-
 @keyframes skills-icon2 {
     0% {
         color: var(--main-text-color);

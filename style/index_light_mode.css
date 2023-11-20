@@ -11,7 +11,7 @@
 }
 
 a {
-    cursor: pointer;
+    cursor: pointer !important;
     text-decoration: none;
     color: var(--main-text-color);
 }
@@ -34,29 +34,45 @@ a {
 body {
     background-color: var(--main-bg-color);
 }
+header{
+    height: fit-content;
+}
 
 nav {
+    background-color: var(--bottons-border-color);
+    border-radius: 3rem;
     width: 90%;
+    margin-bottom: 12rem;
     position: fixed;
+    z-index: 10;
+    padding: .7rem 1rem 0;
+   
 }
 nav i {
     font-size: 1.2rem;
     position: relative;
     bottom: -0.1rem;
+    color : var(--main-bg-color)
 }
 .header__nav__ul li a {
-    color: var(--main-text-color);
+    color: var(--main-bg-color);
 }
 
 .header__nav__ul li a:hover {
-    border-bottom: solid 2px var(--bottons-border-color);
+    border-bottom: solid 2px var(--icons-color);
 }
 
 .header__nav__ul li .list-item-active {
-    color: var(--bottons-border-color);
+    color: var(--icons-color);
 }
 
 .logo {
+    background-color: var(--main-text-color);
+    border-radius: 3rem;
+    position: relative;
+    z-index: 100;
+    bottom: .2rem;
+    padding: .2rem 1rem;
     font-family: var(--logo-font-family);
     color: var(--bottons-border-color);
     font-size: 1.2rem;
@@ -204,17 +220,7 @@ i.card-icons {
 
 }
 
-.skills-section .even-icon {
-    color: var(--icons-color);
-    transition: 2s;
-    animation: skills-icon 4s infinite 2s linear normal running;
-}
 
-.skills-section .e-icon {
-    color: var(--icons-color);
-    transition: 2s;
-    animation: skills-icon2 4s infinite 2s linear normal running;
-}
 .card{
     background-color: var(--card-color);
 }
@@ -254,15 +260,22 @@ i.card-icons {
     right: 14.5rem;
     top: 2.8rem;
 }
+.nav-sm6{
+    right: 16.6rem;
+    top: 1.7rem;
+}
 
-@keyframes card {
-    from {
-        translate: 300px 0;
-    }
 
-    to {
-        translate: 0 0;
-    }
+.skills-section .even-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon 4s infinite 2s linear normal running;
+}
+
+.skills-section .e-icon {
+    color: var(--icons-color);
+    transition: 2s;
+    animation: skills-icon2 4s infinite 2s linear normal running;
 }
 
 @keyframes skills-icon {
@@ -279,7 +292,6 @@ i.card-icons {
         transform: scale(1);
     }
 }
-
 @keyframes skills-icon2 {
     0% {
         color: var(--main-text-color);
